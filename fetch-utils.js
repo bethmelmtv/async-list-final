@@ -13,3 +13,29 @@ export async function getCandies() {
     return response.data;
     //what does this code mean?
 }
+
+
+export async function getOwls() {
+    const response = await client
+        .from('Owls')
+        .select('*');
+    return response.data;
+}
+
+
+export async function getArtists() {
+    const response = await client
+        .from('Artists')
+        .select('*');
+    return response.data; 
+}
+
+
+
+
+export async function getInstruments() {
+    const response = await client
+        .from('instruments')
+        .select('*');
+    return response.data;
+} 
